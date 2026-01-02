@@ -25,11 +25,6 @@ The development focuses on responsive design and creating an engaging user exper
 * "Learn more" links navigate to corresponding detailed sections
 * Smooth scroll behavior for anchored navigation
 
-### Contact and Communication
-* Integrated contact form with validation
-* Toast notifications for submission feedback
-* Social media integration: LinkedIn, Instagram, Facebook, Discord
-* Company contact information in footer
 
 ### User Experience
 * Clean, modern UI design with consistent color palette
@@ -47,7 +42,6 @@ The development focuses on responsive design and creating an engaging user exper
 * Framer Motion for animations
 * Lucide React for modern icons
 * React Icons for social media icons
-* React Toastify for notifications
 * Plain CSS for styling
 
 ## Getting Started
@@ -109,7 +103,7 @@ npm run preview
 * Navigate to the Contact page
 * Fill in the contact form with your details
 * Submit the form to send your inquiry
-* Receive toast notification confirming submission
+
 
 ## Project Structure
 

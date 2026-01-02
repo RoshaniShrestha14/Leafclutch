@@ -15,10 +15,11 @@
 }
 
 .services-label {
-   font-size: 1rem;
+  font-size: 1rem;
   letter-spacing: 0.12em;
   font-weight: 600;
-  color:#1d72b8;
+  color: #1d72b8;
+  animation: fadeUp 0.8s ease forwards;
 }
 
 .services-title {
@@ -27,6 +28,8 @@
   color: #0b2b3c;
   line-height: 1.15;
   margin-bottom: 1.5rem;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.15s;
 }
 
 .services-title span {
@@ -35,17 +38,31 @@
 
 .services-description {
   max-width: 720px;
-  font-size: 1.25rem;;
+  font-size: 1.25rem;
   color: #5f7a8a;
   line-height: 1.7;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.3s;
 }
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @media (max-width: 768px) {
   .services-intro {
     padding-top: 80px;
+    margin-bottom: 2rem;
   }
 }
+
 
 .software-services {
   width: 100%;
@@ -75,7 +92,7 @@
 }
 
 .software-left h2 {
-  font-size: 2.8rem;
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
   font-weight: 800;
   color: #0b2b3c;
   margin-bottom: 1rem;

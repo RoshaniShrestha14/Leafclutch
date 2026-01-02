@@ -24,8 +24,14 @@ a:hover {
 
 body {
   margin: 0;
+  padding-top: 60px;
   min-width: 320px;
   min-height: 100vh;
+  overscroll-behavior: none;
+}
+
+html {
+  overscroll-behavior: none;
 }
 
 h1 {

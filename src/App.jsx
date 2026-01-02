@@ -3,6 +3,7 @@ import { Outlet, useLocation, useNavigationType } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 
 function ScrollToTopOnRouteChange() {
@@ -33,6 +34,7 @@ const App = () => {
 
       <Navbar />
       <Outlet />
+      <Footer />
       </>
   );
 };

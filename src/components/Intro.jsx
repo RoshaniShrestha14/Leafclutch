@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import {Rocket, Zap, Shield, Clock, Sparkles } from "lucide-react";
 import "./intro.css";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -23,7 +22,6 @@ const scaleIn = {
 };
 
 const Intro = () => {
-  const navigate = useNavigate();
   return (
     <section className="intro">
       

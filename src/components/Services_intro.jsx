@@ -3,10 +3,18 @@ import { Code } from "lucide-react";
 import "./Services_intro.css";
 
 const Services_intro = () => {
-  const [animate, setAnimate] = useState(false);
+  const [animate] = useState(true);
 
   useEffect(() => {
-    setAnimate(true);
+    const hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
   }, []);
 
   return (
@@ -25,7 +33,7 @@ const Services_intro = () => {
         </p>
       </section>
 
-      <section className="software-services">
+      <section id="software-services" className="software-services">
         <div className={`software-left ${animate ? "slide-in-left" : ""}`}>
           <div className="icon-box">
             <Code size={32} color="#1d72b8" />

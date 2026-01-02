@@ -2,8 +2,10 @@ import React from "react";
 import {ShieldCheck, Zap, Users, Layers, Award, TrendingUp,
 } from "lucide-react";
 import "./Technology.css";
+import { useNavigate } from "react-router-dom";
 
 const Technology = () => {
+   const navigate = useNavigate();
   return (
     <>
     <section className="technology">
@@ -100,7 +102,7 @@ const Technology = () => {
             Let's discuss how our solutions can help you achieve your goals. Get a free consultation with our experts.
           </p>
           <div className="buttons">
-            <button className="get-started">Get Started →</button>
+            <button className="get-started" onClick={() => navigate("/contact")}>Get Started →</button>
             <button className="view-pricing">View Pricing</button>
           </div>
         </div>

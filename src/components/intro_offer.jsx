@@ -31,7 +31,7 @@ const IntroOffer = () => {
             Custom software development, backend systems, APIs, and scalable
             enterprise solutions.
           </p>
-          <a href="#">Learn more →</a>
+          <a href="/services#software-services" >Learn more →</a>
         </div>
 
         <div className="card-offer">
@@ -43,7 +43,7 @@ const IntroOffer = () => {
             Responsive websites, web applications, dashboards, and admin panels
             built for performance.
           </p>
-          <a href="#">Learn more →</a>
+          <a href="/services#web-development">Learn more →</a>
         </div>
 
         <div className="card-offer">
@@ -55,7 +55,7 @@ const IntroOffer = () => {
             Android & iOS apps, cross-platform solutions with performance-focused
             development.
           </p>
-          <a href="#">Learn more →</a>
+          <a href="/services#app-development">Learn more →</a>
         </div>
 
         <div className="card-offer">
@@ -67,7 +67,7 @@ const IntroOffer = () => {
             AI-powered solutions, workflow automation, RPA pipelines, and
             intelligent chatbots.
           </p>
-          <a href="#">Learn more →</a>
+          <a href="/services#ai-automation">Learn more →</a>
         </div>
 
         <div className="card-offer">
@@ -79,7 +79,7 @@ const IntroOffer = () => {
             Data cleaning, preprocessing, visualization dashboards, and business
             intelligence.
           </p>
-          <a href="#">Learn more →</a>
+          <a href="/services#data-analysis">Learn more →</a>
         </div>
 
         <div className="card-offer">
@@ -91,7 +91,7 @@ const IntroOffer = () => {
             Private cloud setup, Nextcloud deployment, CI/CD pipelines, and
             secure infrastructure.
           </p>
-          <a href="#">Learn more →</a>
+          <a href="/services#devops-cloud">Learn more →</a>
         </div>
       </div>
     </section>

@@ -1,0 +1,164 @@
+.services {
+  padding: 6rem 4rem;
+  background: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+.services-wrapper {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.services-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.service-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  border: 1px solid #e3eaf1;
+  box-shadow: none;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  opacity: 0;
+  animation: slideLeft 0.9s ease forwards;
+}
+
+.service-box:hover {
+  border-color: #1d72b8;
+  transform: translateY(-4px);
+}
+
+.service-box h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0b2b3c;
+  margin-bottom: 0.4rem;
+}
+
+.service-box p {
+  font-size: 0.9rem;
+  color: #5f7a8a;
+  line-height: 1.6;
+}
+
+.services-right {
+  max-width: 420px;
+  opacity: 0;
+  animation: slideRight 0.9s ease forwards;
+}
+
+.icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: #eaf5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1d72b8;
+  margin-bottom: 1.5rem;
+}
+
+.services-right h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0b2b3c;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+}
+
+.services-right p {
+  font-size: 1.25rem;
+  color: #5f7a8a;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .services-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: stretch;
+  }
+
+  .services-right {
+    order: 1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .services-left {
+    order: 2;
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .services-right h2 {
+    font-size: clamp(2rem, 3vw, 2.2rem);
+    white-space: normal;
+    text-align: left;
+  }
+
+  .services-right p {
+    font-size: 1.1rem;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .icon-wrapper {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding: 4rem 1.5rem;
+  }
+
+  .services-right h2 {
+    font-size: clamp(1.8rem, 4vw, 1.9rem);
+  }
+
+  .service-box {
+    padding: 1rem 1.2rem;
+  }
+}
+
+
+.services-right.devops h2 {
+  white-space: nowrap;
+  font-size: clamp(2.3rem, 2.5vw, 2rem); 
+}
+

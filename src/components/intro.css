@@ -10,16 +10,22 @@
 
 /* Floating animation */
 @keyframes floating {
-  0%, 100% {
-    transform: translateY(0px);
+  0% {
+    transform: translateY(0);
   }
-  50% {
-    transform: translateY(-10px);
+  40% {
+    transform: translateY(-20px);
+  }
+  70% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
 .floating {
-  animation: floating 3s ease-in-out infinite;
+  animation: floating 4.5s ease-in-out infinite;
 }
 
 .floating.delay {
@@ -35,7 +41,7 @@
   background: #e6f2ff;
   color: #1d72b8;
   padding: 0.5rem 1rem;
-  border-radius: 999px;
+  border-radius: 71px;
   border: 1px solid #1d72b8;
   font-size: 0.85rem;
   font-weight: 500;
@@ -68,14 +74,28 @@
 }
 
 .btn-primary {
-  background: #FDFFB8;
-  border: none;
-  padding: 0.8rem 1.6rem;
+  background-color: #FDFFB8;
+  color: #0f172a; 
+  padding:  0.8rem 1.6rem;
   border-radius: 8px;
   font-weight: 600;
-  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.btn-primary:hover {
+  background-color: #FDFFB8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  color: black;
+}
+
+.btn-primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #0f172a !important; 
+}
 .btn-secondary {
   background: white;
   border: 1px solid #cbd5e1;
@@ -83,7 +103,15 @@
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
+  color: black;
 }
+.btn-secondary:hover {
+  background-color: #0f4c6e;
+  color: white;
+  border-color: #0f4c6e;
+  transition: all 0.2s ease;
+}
+
 .automation {
   color: #1d72b8 !important;
 }
@@ -102,7 +130,7 @@
 }
 
 .card {
-  width: 380px;
+  width: 450px;
   background: white;
   border-radius: 16px;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
@@ -125,19 +153,45 @@
 .yellow { background: #facc15; }
 .green { background: #22c55e; }
 
+.three-line {
+  position: relative;
+  margin: 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.three-line div {
+  height: 12px;
+  width: 100%;
+  background: #f1f5f9;
+  border-radius: 8px;
+}
+
+.three-line div:nth-child(2) {
+  width: 85%;
+}
+
+.three-line div:nth-child(3) {
+  width: 70%;
+}
+
+
 .card-body {
   position: relative;
+  
 }
 
 .performance {
   position: absolute;
-  top: 10px;
+  top: -18px;
   left: 10px;
   background: white;
   padding: 0.4rem 0.7rem;
   border-radius: 8px;
   font-size: 0.8rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 5;            
 }
 
 .chart {
@@ -184,4 +238,63 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  border-radius: 70px;
 }
+@media (max-width: 1024px) {
+  .intro {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    gap: 3rem;
+  }
+
+  .intro-left {
+    max-width: 100%;
+  }
+
+  .intro-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro-left p {
+    max-width: 100%;
+  }
+
+  .intro-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-features {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .intro-right {
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-left h1 {
+    font-size: 1.9rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+

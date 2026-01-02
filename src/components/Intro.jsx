@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import {Rocket, Zap, Shield, Clock, Sparkles } from "lucide-react";
 import "./intro.css";
-
-
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
@@ -23,6 +23,7 @@ const scaleIn = {
 };
 
 const Intro = () => {
+  const navigate = useNavigate();
   return (
     <section className="intro">
       
@@ -58,8 +59,8 @@ const Intro = () => {
           variants={fadeUp}
           transition={{ duration: 0.6 }}
         >
-          <button className="btn-primary">Get Started →</button>
-          <button className="btn-secondary">View Our Work</button>
+        <Link to="/contact" className="btn-primary">Get Started →</Link>
+        <Link to="/services" className="btn-secondary">View Our Work</Link>
         </motion.div>
 
         <motion.div className="intro-features" variants={stagger}>
@@ -88,17 +89,22 @@ const Intro = () => {
             <span className="dot yellow"></span>
             <span className="dot green"></span>
           </div>
+          <div className="three-line">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
 
           <div className="card-body">
             <div className="performance floating">
-              <Zap size={14} />
+              <Zap stroke="#1d72b8" strokeWidth={2} size={16} />
               Performance <strong>+98%</strong>
-            </div>
+              </div>
 
             <div className="chart"></div>
 
             <div className="uptime floating delay">
-              <Clock size={14} />
+              <Shield stroke="#FDFFB8" strokeWidth={2} size={16} />
               Uptime <strong>99.9%</strong>
             </div>
           </div>
